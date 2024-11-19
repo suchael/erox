@@ -1,96 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Erox - Your Hauling Partner</title>
-  <link rel="stylesheet" href="index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="container">
-    <!-- Header -->
-    <header class="header">
-      <div class="header-content">
-        <img src="./images//erox1.jpg" alt="Erox Logo" class="logo">
-        <h1 class="company-name">Erox</h1>
-      </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="main">
-      <!-- Form Section -->
-      <section class="form-section">
-        <h2>Plan Your Interstellar Journey</h2>
-        <form class="haul-form">
-          <label for="location">Current Location</label>
-          <select id="location" required>
-            <option value="" disabled selected>Select starting location</option>
-            <option value="Earth">Earth</option>
-            <option value="Mars">Mars</option>
-            <option value="Jupiter">Jupiter</option>
-          </select>
-
-          <label for="cargo-capacity">Cargo Capacity</label>
-          <input type="number" id="cargo-capacity" placeholder="Enter cargo capacity" required>
-
-          <label for="contracts">Available Contracts</label>
-          <textarea id="contracts" rows="4" placeholder="List your contracts"></textarea>
-
-          <div class="button-group">
-            <button type="button" class="add-contract-btn">+ Add Contract</button>
-            <button type="submit" class="submit-btn">Start Hauling</button>
-          </div>
-        </form>
-      </section>
-
-      <!-- FAQ Section -->
-      <section class="faq-section">
-        <h2>Why Erox?</h2>
-        <div class="faq-item">
-          <button class="faq-header">Massive Opportunities</button>
-          <div class="faq-body">
-            <p>Access a vast network of intergalactic contracts and expand your hauling opportunities like never before.</p>
-          </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Erox - Your Hauling Partner</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#000000" />
+    <!-- Change iOS Safari status bar color -->
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-content">
+          <img src="./images/erox1.jpg" alt="Erox Logo" class="logo" />
+          <h1 class="company-name">Erox</h1>
         </div>
-        <div class="faq-item">
-          <button class="faq-header">Premium Support</button>
-          <div class="faq-body">
-            <p>Our support team is available 24/7 to assist you with any challenges you encounter on your cosmic journey.</p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-header">Advanced Technology</button>
-          <div class="faq-body">
-            <p>Leverage state-of-the-art hauling tools and resources designed to make your missions more efficient.</p>
-          </div>
-        </div>
-      </section>
-    </main>
+      </header>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-content">
-        <img src="./images/erox2.jpg" alt="Erox Logo" class="footer-logo">
-        <img src="./images/erox3.jpg" alt="Erox Logo" class="footer-logo">
-        <p class="footer-text">
-          &copy; 2024 Erox. Innovating cosmic logistics for explorers everywhere. <br>
-          Trusted. Reliable. Unparalleled.
-        </p>
-      </div>
-    </footer>
-  </div>
+      <!-- Main Content -->
+      <main class="main">
+        <!-- Form Section -->
+        <section class="form-section">
+          <h2>Plan Your Interstellar Journey</h2>
+          <form class="haul-form">
+            <label for="location">Current Location</label>
+            <select id="location" required>
+              <option value="" disabled selected>
+                Select starting location
+              </option>
+              <option value="Earth">New babbage Interstellar spaceport</option>
+              <option value="Mars">Port Tressler</option>
+              <option value="Jupiter">Rayari Deltana research outpost</option>
+              <option value="Jupiter">Shubin Mining facility SMO-10</option>
+              <option value="Jupiter">Shubin Mining facility SMO-13</option>
+              <option value="Jupiter">Shubin Mining facility SMO-18</option>
+              <option value="Jupiter">Shubin Mining facility SMO-22</option>
+              <option value="Jupiter">
+                Covalex Distribution center S4DC05
+              </option>
+              <option value="Jupiter">Cry astro processing plant 19-02</option>
+              <option value="Jupiter">Cry astro processing plant 34-12</option>
+              <option value="Jupiter">
+                Greycat stanton IV Production complex A
+              </option>
+              <option value="Jupiter">MicroTech logistic depot S4LD01</option>
+              <option value="Jupiter">MicroTech logistic depot S4LD13</option>
+              <option value="Jupiter">Sakura sun goldenrod Workcenter</option>
+              <option value="Jupiter">Ranyari avik research outpost</option>
+            </select>
 
-  <!-- JavaScript -->
-  <script>
-    // FAQ Toggle Logic
-    const faqHeaders = document.querySelectorAll('.faq-header');
-    faqHeaders.forEach(header => {
-      header.addEventListener('click', () => {
-        const body = header.nextElementSibling;
-        body.classList.toggle('active');
+            <label for="cargo-capacity">Cargo Capacity</label>
+            <input
+              type="number"
+              id="cargo-capacity"
+              placeholder="Enter cargo capacity"
+              required
+            />
+
+            <div class="button-group">
+              <button
+                type="button"
+                id="add-contract-btn"
+                class="add-contract-btn"
+              >
+                + Add Contract
+              </button>
+              <button type="submit" class="submit-btn">Start Hauling</button>
+            </div>
+          </form>
+
+          <!-- Contracts Section -->
+          <div id="contracts-container"></div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <h2>Why Erox?</h2>
+          <div class="faq-item">
+            <button class="faq-header">Massive Opportunities</button>
+            <div class="faq-body">
+              <p>
+                Access a vast network of intergalactic contracts and expand your
+                hauling opportunities like never before.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-header">Premium Support</button>
+            <div class="faq-body">
+              <p>
+                Our support team is available 24/7 to assist you with any
+                challenges you encounter on your cosmic journey.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-header">Advanced Technology</button>
+            <div class="faq-body">
+              <p>
+                Leverage state-of-the-art hauling tools and resources designed
+                to make your missions more efficient.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-content">
+          <img src="./images/erox2.jpg" alt="Erox Logo" class="footer-logo" />
+          <img src="./images/erox3.jpg" alt="Erox Logo" class="footer-logo" />
+          <p class="footer-text">
+            &copy; 2024 Erox. Innovating cosmic logistics for explorers
+            everywhere. <br />
+            Trusted. Reliable. Unparalleled.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      document.querySelectorAll(".faq-header").forEach((header) => {
+        header.addEventListener("click", () => {
+          const faqBody = header.nextElementSibling; // Select the associated body
+          faqBody.classList.toggle("active"); // Toggle the active class
+        });
       });
-    });
-  </script>
-</body>
+
+      const addContractBtn = document.getElementById("add-contract-btn");
+      const contractsContainer = document.getElementById("contracts-container");
+
+      let contractCount = 0;
+
+      addContractBtn.addEventListener("click", () => {
+        const contractDiv = document.createElement("div");
+        contractDiv.className = "contract-section";
+        contractDiv.innerHTML = `
+          <h3>Contract ${++contractCount}</h3>
+          <button type="button" class="add-loading-btn">+ Add Loading</button>
+          <button type="button" class="add-offloading-btn">+ Add Offloading</button>
+          <div class="loading-container"></div>
+          <div class="offloading-container"></div>
+        `;
+
+        contractsContainer.appendChild(contractDiv);
+
+        const addLoadingBtn = contractDiv.querySelector(".add-loading-btn");
+        const addOffloadingBtn = contractDiv.querySelector(
+          ".add-offloading-btn"
+        );
+        const loadingContainer =
+          contractDiv.querySelector(".loading-container");
+        const offloadingContainer = contractDiv.querySelector(
+          ".offloading-container"
+        );
+
+        addLoadingBtn.addEventListener("click", () => {
+          const loadingDiv = document.createElement("div");
+          loadingDiv.className = "loading-section";
+          loadingDiv.innerHTML = `
+            <h3>Loading section</h3>
+            <label for="scu-volume">SCU Volume</label>
+            <input type="number" id="scu-volume" placeholder="Enter SCU Volume" />
+
+            <label for="cargo-type">Cargo Type</label>
+            <select id="cargo-type">
+              <option value="" disabled selected>Select Cargo Type</option>
+              <option value="iron-ore">Iron Ore</option>
+              <option value="titanium">Titanium</option>
+              <option value="gold">Gold</option>
+            </select>
+
+            <label for="loading-at">Loading At</label>
+            <select id="loading-at">
+              <option value="" disabled selected>Select Loading Location</option>
+              <option value="port-tressler">Port Tressler</option>
+              <option value="shubin-facility">Shubin Mining Facility</option>
+            </select>
+          `;
+          loadingContainer.appendChild(loadingDiv);
+        });
+
+        addOffloadingBtn.addEventListener("click", () => {
+          const offloadingDiv = document.createElement("div");
+          offloadingDiv.className = "offloading-section";
+          offloadingDiv.innerHTML = `
+            <h3>Off loading section</h3>
+            <label for="scu-volume">SCU Volume</label>
+            <input type="number" id="scu-volume" placeholder="Enter SCU Volume" />
+
+            <label for="cargo-type">Cargo Type</label>
+            <select id="cargo-type">
+              <option value="" disabled selected>Select Cargo Type</option>
+              <option value="iron-ore">Iron Ore</option>
+              <option value="titanium">Titanium</option>
+              <option value="gold">Gold</option>
+            </select>
+
+            <label for="offloading-at">Offloading At</label>
+            <select id="offloading-at">
+              <option value="" disabled selected>Select Offloading Location</option>
+              <option value="port-tressler">Port Tressler</option>
+              <option value="shubin-facility">Shubin Mining Facility</option>
+            </select>
+          `;
+          offloadingContainer.appendChild(offloadingDiv);
+        });
+      });
+    </script>
+  </body>
 </html>
