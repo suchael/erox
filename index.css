@@ -411,7 +411,7 @@ button:disabled {
   .main {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 0;
+    padding: 20px 10px;
   }
 
   .footer-logo {
