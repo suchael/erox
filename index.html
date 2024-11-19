@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erox - Your Hauling Partner</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <img src="./images//erox1.jpg" alt="Erox Logo" class="logo">
+        <h1 class="company-name">Erox</h1>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Form Section -->
+      <section class="form-section">
+        <h2>Plan Your Interstellar Journey</h2>
+        <form class="haul-form">
+          <label for="location">Current Location</label>
+          <select id="location" required>
+            <option value="" disabled selected>Select starting location</option>
+            <option value="Earth">Earth</option>
+            <option value="Mars">Mars</option>
+            <option value="Jupiter">Jupiter</option>
+          </select>
+
+          <label for="cargo-capacity">Cargo Capacity</label>
+          <input type="number" id="cargo-capacity" placeholder="Enter cargo capacity" required>
+
+          <label for="contracts">Available Contracts</label>
+          <textarea id="contracts" rows="4" placeholder="List your contracts"></textarea>
+
+          <div class="button-group">
+            <button type="button" class="add-contract-btn">+ Add Contract</button>
+            <button type="submit" class="submit-btn">Start Hauling</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <h2>Why Erox?</h2>
+        <div class="faq-item">
+          <button class="faq-header">Massive Opportunities</button>
+          <div class="faq-body">
+            <p>Access a vast network of intergalactic contracts and expand your hauling opportunities like never before.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-header">Premium Support</button>
+          <div class="faq-body">
+            <p>Our support team is available 24/7 to assist you with any challenges you encounter on your cosmic journey.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-header">Advanced Technology</button>
+          <div class="faq-body">
+            <p>Leverage state-of-the-art hauling tools and resources designed to make your missions more efficient.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <img src="./images/erox2.jpg" alt="Erox Logo" class="footer-logo">
+        <img src="./images/erox3.jpg" alt="Erox Logo" class="footer-logo">
+        <p class="footer-text">
+          &copy; 2024 Erox. Innovating cosmic logistics for explorers everywhere. <br>
+          Trusted. Reliable. Unparalleled.
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // FAQ Toggle Logic
+    const faqHeaders = document.querySelectorAll('.faq-header');
+    faqHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const body = header.nextElementSibling;
+        body.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
