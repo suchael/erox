@@ -253,6 +253,39 @@ button:disabled {
   transform: translateY(-2px);
 }
 
+
+/* Loading Section Design */
+.loading {
+  display: flex;
+  flex-direction: row; /* Arrange content horizontally */
+  align-items: center; /* Center the items vertically */
+  justify-content: space-between; /* Distribute space evenly */
+  padding: 5px;
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 15px; /* Spacing between sections */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+
+.remove-btn {
+  background-color: #e74c3c; /* Red background */
+  color: white;
+  border: none;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  outline: none;
+
+}
+
+.remove-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+
 /* Add Contract Section Styles */
 .dynamic-section {
   margin-top: 20px;

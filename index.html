@@ -157,13 +157,6 @@
 
     <!-- JavaScript -->
     <script>
-      document.querySelectorAll(".faq-header").forEach((header) => {
-        header.addEventListener("click", () => {
-          const faqBody = header.nextElementSibling; // Select the associated body
-          faqBody.classList.toggle("active"); // Toggle the active class
-        });
-      });
-
       const addContractBtn = document.getElementById("add-contract-btn");
       const contractsContainer = document.getElementById("contracts-container");
 
@@ -183,27 +176,27 @@
         contractsContainer.appendChild(contractDiv);
 
         const addLoadingBtn = contractDiv.querySelector(".add-loading-btn");
-        const addOffloadingBtn = contractDiv.querySelector(
-          ".add-offloading-btn"
-        );
-        const loadingContainer =
-          contractDiv.querySelector(".loading-container");
-        const offloadingContainer = contractDiv.querySelector(
-          ".offloading-container"
-        );
+        const addOffloadingBtn = contractDiv.querySelector(".add-offloading-btn");
+        const loadingContainer = contractDiv.querySelector(".loading-container");
+        const offloadingContainer = contractDiv.querySelector(".offloading-container");
 
+        // Add Loading Section
         addLoadingBtn.addEventListener("click", () => {
           const loadingDiv = document.createElement("div");
           loadingDiv.className = "loading-section";
           loadingDiv.innerHTML = `
+          <div class ="loading">
             <h3>Loading section</h3>
+            <button type="button" class="remove-btn">Remove</button>
+          </div>
             <label for="scu-volume">SCU Volume</label>
+
             <input type="number" id="scu-volume" placeholder="Enter SCU Volume" />
 
             <label for="cargo-type">Cargo Type</label>
             <select id="cargo-type">
               <option value="" disabled selected>Select Cargo Type</option>
-              <option value="iron-ore">Tungsten (Ore)</option>
+               <option value="iron-ore">Tungsten (Ore)</option>
               <option value="iron-ore">Aluminium (Ore)</option>
               <option value="iron-ore">Aluminium</option>
               <option value="iron-ore">Hydrogen</option>
@@ -236,22 +229,52 @@
             </select>
           `;
           loadingContainer.appendChild(loadingDiv);
+
+          // Add event listener to remove loading section
+          const removeBtn = loadingDiv.querySelector(".remove-btn");
+          removeBtn.addEventListener("click", () => {
+            loadingDiv.remove(); // Remove the loading section
+          });
         });
 
+        // Add Offloading Section
         addOffloadingBtn.addEventListener("click", () => {
           const offloadingDiv = document.createElement("div");
           offloadingDiv.className = "offloading-section";
           offloadingDiv.innerHTML = `
-            <h3>Off loading section</h3>
+           <div class ="loading">
+            <h3>Offloading section</h3>
+            <button type="button" class="remove-btn">Remove</button>
+          </div>
             <label for="scu-volume">SCU Volume</label>
             <input type="number" id="scu-volume" placeholder="Enter SCU Volume" />
 
             <label for="cargo-type">Cargo Type</label>
             <select id="cargo-type">
               <option value="" disabled selected>Select Cargo Type</option>
-              <option value="iron-ore">Iron Ore</option>
+               <option value="iron-ore">Tungsten (Ore)</option>
+              <option value="iron-ore">Aluminium (Ore)</option>
+              <option value="iron-ore">Aluminium</option>
+              <option value="iron-ore">Hydrogen</option>
               <option value="titanium">Titanium</option>
-              <option value="gold">Gold</option>
+              <option value="titanium">Titanium (Ore)</option>
+              <option value="titanium">Quartz</option>
+              <option value="titanium">Quartz (Ore)</option>
+              <option value="titanium">Corundum</option>
+              <option value="titanium">Corundum (Ore)</option>
+              <option value="titanium">Tin</option>
+              <option value="titanium">Tin (Ore)</option>
+              <option value="titanium">Silicon</option>
+              <option value="titanium">Waste</option>
+              <option value="titanium">Scrap</option>
+              <option value="titanium">Carbon</option>
+              <option value="titanium">Processed food</option>
+              <option value="titanium">Copper</option>
+              <option value="titanium">Copper (Ore)</option>
+              <option value="iron-ore">Iron</option>
+              <option value="iron-ore">Iron (Ore)</option>
+              <option value="gold">Hydrogen fuel</option>
+              <option value="gold">Tungsten</option>
             </select>
 
             <label for="offloading-at">Offloading At</label>
@@ -262,6 +285,12 @@
             </select>
           `;
           offloadingContainer.appendChild(offloadingDiv);
+
+          // Add event listener to remove offloading section
+          const removeBtn = offloadingDiv.querySelector(".remove-btn");
+          removeBtn.addEventListener("click", () => {
+            offloadingDiv.remove(); // Remove the offloading section
+          });
         });
       });
     </script>
