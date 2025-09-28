@@ -10,11 +10,7 @@
       rel="stylesheet"
     />
     <meta name="theme-color" content="#000000" />
-    <!-- Change iOS Safari status bar color -->
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   </head>
   <body>
     <div class="container">
@@ -32,72 +28,90 @@
         <section class="form-section">
           <h2>Plan Your Interstellar Journey</h2>
           <form class="haul-form">
-            <label for="location">Current Location</label>
-            <select id="location" required>
-              <option value="" disabled selected>
-                Select starting location
-              </option>
-              <option value="Earth">New babbage Interstellar spaceport</option>
-              <option value="Mars">Port Tressler</option>
-              <option value="Jupiter">Rayari Deltana research outpost</option>
-              <option value="Jupiter">Shubin Mining facility SMO-10</option>
-              <option value="Jupiter">Shubin Mining facility SMO-13</option>
-              <option value="Jupiter">Shubin Mining facility SMO-18</option>
-              <option value="Jupiter">Shubin Mining facility SMO-22</option>
-              <option value="Jupiter">
-                Covalex Distribution center S4DC05
-              </option>
-              <option value="Jupiter">Cry astro processing plant 19-02</option>
-              <option value="Jupiter">Cry astro processing plant 34-12</option>
-              <option value="Jupiter">
-                Greycat stanton IV Production complex A
-              </option>
-              <option value="Jupiter">MicroTech logistic depot S4LD01</option>
-              <option value="Jupiter">MicroTech logistic depot S4LD13</option>
-              <option value="Jupiter">Sakura sun goldenrod Workcenter</option>
-              <option value="Jupiter">Ranyari avik research outpost</option>
-              <option value="Jupiter">Ranyari Katag research outpost</option>
-              <option value="Jupiter">Shubin Mining facility SMCa-6</option>
-              <option value="Jupiter">Shubin Mining facility SMCa-8</option>
-              <option value="Jupiter">Ranyari Cantwell research outpost</option>
-              <option value="Jupiter">Ranyari McGrath research outpost</option>
-              <option value="Jupiter">Bud's Growery</option>
-              <option value="Jupiter">Delvin scrap and salvage</option>
-              <option value="Jupiter">Rikal memorial spaceport</option>
-              <option value="Jupiter">Baijini point</option>
-              <option value="Jupiter">Humboldt mines</option>
-              <option value="Jupiter">Loveridge mineral reserve</option>
-              <option value="Jupiter">Shubin mining facility SAL-2</option>
-              <option value="Jupiter">Shubin mining facility SAL-5</option>
-              <option value="Jupiter">The orphanage</option>
-              <option value="Jupiter">Arc corp mining area 048</option>
-              <option value="Jupiter">Arc corp mining area 056</option>
-              <!-- Last batch -->
-              <option for="Jupiter">MIC-L1 shallow frontier station</option>
-              <option for="Jupiter">MIC-L2 Long forest station</option>
-              <option for="Jupiter">MIC-L3 Endless odyssey station</option>
-              <option for="Jupiter">MIC-L4 Red cross road station</option>
-              <option for="Jupiter">MIC-L5 Modern Icarus station</option>
-              <option for="Jupiter">Pyro gateway station</option>
-              <option for="Jupiter">Terra gateway station</option>
-              <option for="Jupiter">Magnus gateway station</option>
+            
+            <!-- Start Destination -->
+           <label for="start-destination">Start Destination</label>
+<select id="start-destination" required>
+  <option value="" disabled selected>Select starting location</option>
+  <option value="Earth">New Babbage Interstellar Spaceport</option>
+  <option value="Mars">Port Tressler</option>
+  <option value="Jupiter">Rayari Deltana Research Outpost</option>
+  <option value="Jupiter">Shubin Mining Facility SMO-10</option>
+  <option value="Jupiter">Shubin Mining Facility SMO-13</option>
+  <option value="Jupiter">Shubin Mining Facility SMO-18</option>
+  <option value="Jupiter">Shubin Mining Facility SMO-22</option>
+  <option value="Jupiter">Covalex Distribution Center S4DC05</option>
+  <option value="Jupiter">Cry Astro Processing Plant 19-02</option>
+  <option value="Jupiter">Cry Astro Processing Plant 34-12</option>
+  <option value="Jupiter">Greycat Stanton IV Production Complex A</option>
+  <option value="Jupiter">MicroTech Logistic Depot S4LD01</option>
+  <option value="Jupiter">MicroTech Logistic Depot S4LD13</option>
+  <option value="Jupiter">Sakura Sun Goldenrod Workcenter</option>
+  <option value="Jupiter">Ranyari Avik Research Outpost</option>
+  <option value="Jupiter">Ranyari Katag Research Outpost</option>
+  <option value="Jupiter">Shubin Mining Facility SMCa-6</option>
+  <option value="Jupiter">Shubin Mining Facility SMCa-8</option>
+  <option value="Jupiter">Ranyari Cantwell Research Outpost</option>
+  <option value="Jupiter">Ranyari McGrath Research Outpost</option>
+  <option value="Jupiter">Bud's Growery</option>
+  <option value="Jupiter">Delvin Scrap and Salvage</option>
+  <option value="Jupiter">Rikal Memorial Spaceport</option>
+  <option value="Jupiter">Baijini Point</option>
+  <option value="Jupiter">Humboldt Mines</option>
+  <option value="Jupiter">Loveridge Mineral Reserve</option>
+  <option value="Jupiter">Shubin Mining Facility SAL-2</option>
+  <option value="Jupiter">Shubin Mining Facility SAL-5</option>
+  <option value="Jupiter">The Orphanage</option>
+  <option value="Jupiter">Arc Corp Mining Area 048</option>
+  <option value="Jupiter">Arc Corp Mining Area 056</option>
+  <!-- Last batch -->
+  <option value="Jupiter">MIC-L1 Shallow Frontier Station</option>
+  <option value="Jupiter">MIC-L2 Long Forest Station</option>
+  <option value="Jupiter">MIC-L3 Endless Odyssey Station</option>
+  <option value="Jupiter">MIC-L4 Red Cross Road Station</option>
+  <option value="Jupiter">MIC-L5 Modern Icarus Station</option>
+  <option value="Jupiter">Pyro Gateway Station</option>
+  <option value="Jupiter">Terra Gateway Station</option>
+  <option value="Jupiter">Magnus Gateway Station</option>
+</select>
+
+            
+
+            <!-- End Destination -->
+            <label for="end-destination">End Destination</label>
+            <select id="end-destination" required>
+              <option value="" disabled selected>Select destination</option>
+              <option value="arc-corp">Arc Corp Mining Area 048</option>
+              <option value="arc-corp-056">Arc Corp Mining Area 056</option>
+              <option value="humboldt">Humboldt Mines</option>
+              <option value="loveridge">Loveridge Mineral Reserve</option>
+              <option value="orphanage">The Orphanage</option>
+              <option value="magnus-gateway">Magnus Gateway Station</option>
+              <option value="mic-l1">MIC-L1 Shallow Frontier Station</option>
+              <option value="mic-l5">MIC-L5 Modern Icarus Station</option>
             </select>
 
-            <label for="cargo-capacity">Cargo Capacity</label>
-          
+            <!-- Ship Type -->
+            <label for="ship-type">Ship Type</label>
+            <select id="ship-type" required>
+              <option value="" disabled selected>Select ship type</option>
+              <option value="cargo-hauler">Cargo Hauler</option>
+              <option value="freighter">Freighter</option>
+              <option value="carrier">Carrier</option>
+              <option value="explorer">Explorer</option>
+            </select>
+
+            <!-- Ship Capacity -->
+            <label for="ship-capacity">Ship Capacity</label>
             <input
               type="number"
-              id="cargo-capacity"
-              placeholder="Enter cargo capacity"
+              id="ship-capacity"
+              placeholder="Enter ship capacity (SCU)"
               required
             />
 
             <div class="button-group">
-              <button
-                type="button"
-                id="add-contract-btn"
-                class="add-contract-btn"
-              >
+              <button type="button" id="add-contract-btn" class="add-contract-btn">
                 + Add Contract
               </button>
               <button type="submit" class="submit-btn">Start Hauling</button>
@@ -155,7 +169,7 @@
       </footer>
     </div>
 
-    <!-- JavaScript -->
+    <!-- Keep your existing JavaScript (unchanged for contracts) -->
     <script>
       const addContractBtn = document.getElementById("add-contract-btn");
       const contractsContainer = document.getElementById("contracts-container");
@@ -172,10 +186,9 @@
           <div class="loading-container"></div>
           <div class="offloading-container"></div>
         `;
-
         contractsContainer.appendChild(contractDiv);
-
-        const addLoadingBtn = contractDiv.querySelector(".add-loading-btn");
+        // ... existing JS logic for loading/offloading remains
+         const addLoadingBtn = contractDiv.querySelector(".add-loading-btn");
         const addOffloadingBtn = contractDiv.querySelector(".add-offloading-btn");
         const loadingContainer = contractDiv.querySelector(".loading-container");
         const offloadingContainer = contractDiv.querySelector(".offloading-container");
